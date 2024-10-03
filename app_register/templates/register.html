@@ -1,0 +1,14 @@
+<h2>Student Information</h2>
+<ul>
+    <li><strong>Student ID:</strong> {{ user_details.student_id }}</li>
+    <li><strong>Name:</strong> {{ user_details.name }}</li>
+    <li><strong>Branch:</strong> {{ user_details.branch }}</li>
+    <li><strong>Batch:</strong> {{ user_details.batch }}</li>
+</ul>
+
+<h2>Set Your Password</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Set Password</button>
+</form>
